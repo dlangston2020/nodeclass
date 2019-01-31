@@ -62,6 +62,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        headerTitle: HEADER_TITLE,
+        pageTitle: 'Projects page'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: PAGE_ERROR_MESSAGE
