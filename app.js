@@ -5,7 +5,7 @@ const fs = require('fs');
 let app = express();
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const PAGE_ERROR_MESSAGE = "OOPS! Something went wrong.";
 const HEADER_TITLE = "My Website";
 const NEW_LINE = '\n';
@@ -71,5 +71,5 @@ app.get('/bad', (req, res) => {
 
 //listen
 app.listen(PORT, () => {
-    console.log('Server is up on port 3000');
+    console.log(`Server is up on port ${PORT}`);
 });
